@@ -56,12 +56,16 @@ let percentage = (marks, total) => (marks * 100) / total;
 ```
 
 3. Why is a function definition an expression in JavaScript? Give one example of function expression.
-// function definition or declaration means we are defining any new function using keyword function. And we all know any function in javascript is an object. And defining any object is an expression in javascript.
+//
+because function defition is a value and we can store it a variable it will  become an expression.
+example:
+<!-- let sum =  (a,b) => a + b; -->
 
 example: let getEven = (num) => num % 2 == 0; 
 
-4. Why is a function call an expression in JavaScript?
-// The function call in javascript is use for execute whole code of snippet inside the particular function.
+4. Why is a function call  an expression in JavaScript?
+ 
+// We know  that expression always return a value , so  here function call is also always return a value like undefined, number ,boolean etc hence funcyion call is an expression in javascript
 
 
 5. Write VALID and INVALID next to each example below with the reason.
@@ -92,9 +96,7 @@ getOdd(2) // false;
 getOdd(3) // true;
 
 7. What is the similarities between function definition and function call?
-// The similarities between function definition and function call is that ,name of function, the name we used to define a function is used when we call  the function.
-
-
+// The similarities between function definition and function call is that ,both are expression.
 8. Is the code below valid or invalid. Explain with reason.
 
 ```js
@@ -120,8 +122,15 @@ function getOdd(num){
 
 a.filter(getodd) -->
 
-// So here getOdd is a Callback function.
+// So here filter is a heigher order function.
+<!-- 
+function heigher(){
+  function main(){};
+  return main;
+} -->
+
+// so here heigher is a  heigher order function.
 
 10. Explain what is callback function. Why you can pass a function inside a function?
 
-// A function that is passed in another function  as an argument is known as callback function it also delay the executin of code.
+// A function that is passed in another function  as an argument is known as callback function. because callback function is an expression so we can pass it into another function as ans argument. 
