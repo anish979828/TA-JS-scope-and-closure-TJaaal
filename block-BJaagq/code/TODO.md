@@ -12,14 +12,14 @@ function change() {
   console.log(species);
 }
 
-console.log(species); // 1
+console.log(species); // "human"
 change();
-console.log(species); // 2
+console.log(species); // "human"
 ```
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./img/img1.png)
 
 - Create the execution context diagram
 - What will be the value of species on 1 and 2
