@@ -25,6 +25,7 @@
 2. Function Execution ConText. that creates whenever we call any function. -->
 
 7. When global and function execution context gets created?
+//    
 
 8. Function execution gets created during function execution or while declaring a function.
 
@@ -47,7 +48,7 @@ var userMsg = sayHello(user);
 
 <!-- Put your image here -->
 
-![](./img/image-name.jpg)
+![](./img1.png)
 
 
 
@@ -65,7 +66,7 @@ var percentageProfit = getPercentage(400, 200);
 
 <!-- Put your image here -->
 
-![](./img/image-name.jpg)
+![](./img2.png)
 
 
 
@@ -86,4 +87,4 @@ var whoAmIAgain = customeMessage(12);
 
 <!-- Put your image here -->
 
-![](./img/image-name.jpg)
+![](./img3.png)
