@@ -43,7 +43,7 @@ sayHi();
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./img2.png)
 
 3.
 
@@ -60,17 +60,19 @@ sayHi();
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./img3.png)
 
 4.
 
 ```js
-console.log(arr); // output
-console.log(username); // output
+console.log(arr);// Undefined
+console.log(username);// Undefined
 var usename = 'Sam';
 var arr = [1, 2, 3, 4, 5, 6];
 
 function double(num) {
   return num * 2;
 }
+
+
 ```
