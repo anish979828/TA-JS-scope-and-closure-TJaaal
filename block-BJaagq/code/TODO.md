@@ -35,8 +35,8 @@ function topLevelFn() {
   function nestedFn() {
     var anotherLocalVar = "Local to nestedFn's scope.";
 
-    console.log(localVar); // 1
-    console.log(topLevelVar); // 2
+    console.log(localVar);// "This is local to topLevelFn's scope"
+    console.log(topLevelVar); // 'This is global scope!'
   }
 
   nestedFn();
@@ -47,7 +47,7 @@ topLevelFn();
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./img/img2.png)
 
 - Create the execution context diagram
 - What will be the value of 1 and 2
@@ -73,7 +73,8 @@ function main() {
 }
 
 main();
-console.log(one, two, three, four); // 5
+console.log(one, two, three, four); // ReferenceError: four is not defined
+
 ```
 
 <!-- Put your image below -->
