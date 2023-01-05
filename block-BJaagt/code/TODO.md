@@ -22,6 +22,10 @@ The above code will throw an error `Reference Error username is not defined`.
 console.log(useranme); // output
 ```
 
+In above code we are looking for the variable named `usename`. There is no variable named `username` in the global scope. The variable is inside the block scope and we can't access the variable defined inside a block scope from outside.
+
+The above code will throw an error `Reference Error username is not defined`.
+
 3. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
 ```js
@@ -31,6 +35,12 @@ if (true) {
 console.log(useranme); // output
 ```
 
+In above code we are looking for the variable named `usename`. There is no variable named `username` in the global scope. The variable is inside the function scope and we can't access the variable defined inside a function scope from outside.
+
+The above code will throw an error `Reference Error username is not defined`.
+
+
+
 4. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
 ```js
@@ -39,6 +49,10 @@ if (true) {
 }
 console.log(useranme); // output
 ```
+
+In above code we are looking for the variable named `usename`. There is no variable named `username` in the global scope. The variable is inside the function scope and we can't access the variable defined inside a function scope from outside.
+
+The above code will throw an error `Reference Error username is not defined`.
 
 5. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
