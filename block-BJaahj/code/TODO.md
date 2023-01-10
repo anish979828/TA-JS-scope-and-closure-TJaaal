@@ -28,7 +28,10 @@ console.log(
 
 ```js
 function multiMap(arrVals, arrCallbacks) {
-  
+  return arrVals.reduce((acc,cv,i) => {
+    acc[cv] = arrCallbacks.map(fn => fn(cv));
+    return acc;
+  },{})
 }
 
 // TEST
@@ -37,12 +40,11 @@ console.log(
     ['catfood', 'glue', 'beer'],
     [
       function (str) {
-        return str.toUpperCase();
-      },
-      function (str) {
         return (
           str[0].toUpperCase() + str.slice(1).toLowerCase()
         );
+      },function (str) {
+        return str.toUpperCase();
       },
       function (str) {
         return str + str;
