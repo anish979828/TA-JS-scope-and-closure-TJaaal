@@ -2,7 +2,17 @@
 
 ```js
 function once(cb) {
-  // your code goes here
+  let count = 0;
+  function inner(){
+    if(count == 0){
+      cb();
+      alert("Call me once!");
+      count++
+    }else if (count >= 1){
+      alert("can't be called twice");
+    }
+  }
+  return inner;
 }
 
 // TEST
@@ -11,20 +21,28 @@ function sayHello() {
 }
 let log = once(sayHello);
 log(); // alert message "You can only call me once!"
-log(); // return undefinde (can't be called twice)
+log(); // return undefinded (can't be called twice);
 ```
 
 2. Change the above function in such a way that the function accepts two parameter a callback function and parameter for the callback function. When calling the function pass the parameters.
 
 ```js
-function once(cb) {
-  // your code goes here
+function once(cb,param) {
+  let count = 0;
+  function inner(){
+    if(count == 0){
+      cb(param);
+      count++;
+    }else if(count >= 1){
+      alert("can't be called twice");
+    }
+  }
+  return inner;
 }
 
 // TEST
 let log = once(console.log, 'Hello Console');
 log(); // log message "Hello Console"
-log(); // return undefinde (can't be called twice)
 ```
 
 3. Change the above function in such a way that it can accept `n` number of parameters for the callback function.
@@ -34,8 +52,17 @@ log(); // return undefinde (can't be called twice)
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 
 ```js
-function once(cb) {
-  // your code goes here
+  function once(cb,...param) {
+  let count = 0;
+  function inner(){
+    if(count == 0){
+      cb(...param);
+      count++;
+    }else if(count >= 1){
+      alert("can't be called twice");
+    }
+  }
+  return inner;
 }
 
 // TEST
@@ -48,7 +75,15 @@ log(); // return undefinde (can't be called twice)
 
 ```js
 function nTimes(cb, times, ...rest) {
-  // your code goes here
+  let numberOfTimes = 0;
+  return function(){
+      if(numberOfTimes >= times){
+    alert(`Can't call more than ${times} times`)
+  }else{
+    cb(...rest);
+    numberOfTimes++;
+  }
+  }
 }
 
 // TEST
